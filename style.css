@@ -1,7 +1,12 @@
-.completed {
-  text-decoration: line-through solid rgb(0, 0, 0);
-};
+body {
+  text-align: center;
+}
 
 .color {
-  background-color: rgb(128, 128, 128);
-};
+  background-color: grey;
+}
+
+li {
+  list-style: none;
+}
+

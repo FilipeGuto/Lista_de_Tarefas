@@ -1,22 +1,5 @@
-// Ajuda do Baeta para entendimento da logica do exercicio 7;
-// Ajuda do Lucas Caribé na 8 e 10
-function clear() {
-  const lista = document.querySelector('#lista-tarefas');
-  // if (lista) {
-  // for (let index = 0; index < tarefas.length; index += 1) {
-  //   tarefas[index].remove();
-  // }
 
-  // }
-  lista.innerHTML = '';
-}
-function btn() {
-  const botao = document.querySelector('#apaga-tudo');
-  botao.addEventListener('click', clear);
-}
-btn();
-
-function listas(liItem) {
+function color(liItem) {
   liItem.addEventListener('click', (event) => {
     const evento = event.target;
     const selectedItem = document.querySelector('.color');
@@ -27,11 +10,21 @@ function listas(liItem) {
   });
 }
 
+function clear() {
+  const lista = document.querySelector('#lista-tarefas');
+  lista.innerHTML = '';
+}
+function btn() {
+  const botao = document.querySelector('#apaga-tudo');
+  botao.addEventListener('click', clear);
+}
+btn();
+
 function element() {
   const text = document.querySelector('#texto-tarefa').value;
   const list = document.querySelector('#lista-tarefas');
   const newElement = document.createElement('li');
-  listas(newElement);
+  color(newElement);
   document.querySelector('#texto-tarefa').value = null;
   newElement.innerText = text;
   list.appendChild(newElement);
